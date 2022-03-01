@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { gql, useQuery } from "@apollo/client";
 const GET_CHARACTER = gql`
-  query getCharacter($id: Int!) {
+  query GetCharacter($id: ID!) {
     character(id: $id) {
       id
       name
@@ -14,20 +14,16 @@ const GET_CHARACTER = gql`
         id
       }
       origin {
+        id
         name
         type
         dimension
-        residents {
-          id
-        }
       }
       location {
+        id
         name
         type
         dimension
-        residents {
-          id
-        }
       }
     }
   }
@@ -35,11 +31,12 @@ const GET_CHARACTER = gql`
 const Detail = () => {
   const { id } = useParams();
   const { loading, error, data } = useQuery(GET_CHARACTER, {
-    variables: { id: parseInt(id) },
+    variables: { id: +id },
   });
-  console.log(data);
-  console.log(error);
-  return "Detail";
+  console.log(typeof id, id);
+  console.log(loading, data, error);
+  if (loading) return <p>Loading...</p>;
+  return <h1>Hello {data.character.id}</h1>;
 };
 
 export default Detail;
