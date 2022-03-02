@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-const Characters = ({ id }) => {
+const Characters = ({ id, name, image, species }) => {
   return (
     <div>
       <Link to={`/${id}`} id={id}>
-        {id}
+        {name}
       </Link>
+      <img src={image} alt={name} />
     </div>
   );
 };

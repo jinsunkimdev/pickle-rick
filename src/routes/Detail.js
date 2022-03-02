@@ -31,12 +31,27 @@ const GET_CHARACTER = gql`
 const Detail = () => {
   const { id } = useParams();
   const { loading, error, data } = useQuery(GET_CHARACTER, {
-    variables: { id: +id },
+    variables: { id: parseInt(id) },
   });
-  console.log(typeof id, id);
   console.log(loading, data, error);
   if (loading) return <p>Loading...</p>;
-  return <h1>Hello {data.character.id}</h1>;
+  const characterData = data.character;
+  return (
+    <div>
+      <img src={characterData.image} alt={characterData.name} />
+      <h1>Name : {characterData.name}</h1>
+      <h2>Species : {characterData.species}</h2>
+      <h2>Gender : {characterData.gender}</h2>
+      <h2>
+        Origin : {characterData.origin.name} - {characterData.origin.type}
+      </h2>
+      <h2>
+        Current Location : {characterData.location.name} -{" "}
+        {characterData.location.type}
+      </h2>
+      <h2>Status(spoiler alert!) : {characterData.status}</h2>
+    </div>
+  );
 };
 
 export default Detail;

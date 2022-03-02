@@ -1,9 +1,9 @@
 import React from "react";
-import { GetCharactersData } from "../index";
+import { GetCharactersData, GetCharactersPages } from "../index";
 const Home = () => {
   return (
     <main>
-      <GetCharactersData />
+      <GetCharactersPages />
     </main>
   );
 };
