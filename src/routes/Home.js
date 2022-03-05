@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Characters from "../components/Characters";
-import SearchByName from "../components/SearchByName";
+import SearchByInput from "../components/SearchByInput";
 import Pagination from "../components/Pagination";
+import Navbar from "../components/Navbar"
 import { useQuery, gql } from "@apollo/client";
 //Grapql query
 const GET_CHARACTERS = gql`
@@ -58,7 +59,8 @@ const Home = () => {
 
   return (
     <main>
-      <SearchByName handleChange={handleChange} handleSubmit={handleSubmit} />
+      <Navbar/>
+      <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
       {charactersData.map((character) => (
         <Characters
           key={character.id}

@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { gql, useQuery } from "@apollo/client";
+import Navbar from "../components/Navbar"
 const GET_CHARACTER = gql`
   query GetCharacter($id: ID!) {
     character(id: $id) {
@@ -38,6 +39,7 @@ const Detail = () => {
   const characterData = data.character;
   return (
     <div>
+      <Navbar/>
       <img src={characterData.image} alt={characterData.name} />
       <h1>Name : {characterData.name}</h1>
       <h2>Species : {characterData.species}</h2>

@@ -1,4 +1,4 @@
-const SearchByName= ({ handleChange, handleSubmit }) => {
+const SearchByInput= ({ handleChange, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="inputName" onChange={handleChange} />
@@ -7,4 +7,4 @@ const SearchByName= ({ handleChange, handleSubmit }) => {
   );
 };
 
-export default SearchByName;
+export default SearchByInput;
