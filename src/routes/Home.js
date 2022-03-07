@@ -58,9 +58,10 @@ const Home = () => {
   };
 
   return (
-    <main>
+    <main className="no-underline">
       <Navbar/>
       <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
+      <div className="grid grid-cols-4 ">
       {charactersData.map((character) => (
         <Characters
           key={character.id}
@@ -70,7 +71,7 @@ const Home = () => {
           species={character.species}
         />
       ))}
-      ;
+      </div>
       <Pagination
         page={page}
         totalItems={totalItems}
