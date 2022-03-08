@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
 const Characters = ({ id, name, image, species }) => {
   return (
-    <div className="border-solid border-2 mx-auto my-auto">
-      <Link className="no-underline"to={`/${id}`} id={id}>
-      <img src={image} alt={name} />
-      <h1>{name}</h1>
-      <h2>species:{species}</h2>
+    <div className="text-center hover:scale-110 ease-in duration-200 mx-5 my-5">
+      <Link className=" no-underline"to={`/${id}`} id={id}>
+      <img className="w-full border-solid border-5 rounded-full  mx-auto my-0" src={image} alt={name} />
+      <p className="text-3xl">{name}</p>
       </Link>
     </div>
   );

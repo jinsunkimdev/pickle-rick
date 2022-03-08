@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['"Patrick Hand SC"', 'cursive']
+      },
       'animation':{
         'gradient-x':'gradient-x 15s ease infinite',
       },

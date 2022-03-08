@@ -3,6 +3,7 @@ import Characters from "../components/Characters";
 import SearchByInput from "../components/SearchByInput";
 import Pagination from "../components/Pagination";
 import Navbar from "../components/Navbar"
+import ErrorPage from "../components/404";
 import { useQuery, gql } from "@apollo/client";
 //Grapql query
 const GET_CHARACTERS = gql`
@@ -37,7 +38,7 @@ const Home = () => {
   });
   //When loading, error
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (error) return <ErrorPage/>;
   //Variables for components
   const totalItems = data.characters.info.count;
   const charactersData = data.characters.results;
@@ -58,7 +59,7 @@ const Home = () => {
   };
 
   return (
-    <main className="no-underline">
+    <main className="font-sans no-underline">
       <Navbar/>
       <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
       <div className="grid grid-cols-4 ">

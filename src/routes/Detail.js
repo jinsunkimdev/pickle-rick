@@ -40,7 +40,8 @@ const Detail = () => {
   return (
     <div>
       <Navbar/>
-      <img src={characterData.image} alt={characterData.name} />
+      <main className="flex flex-col justify-center text-center items-center">
+      <img className="w-1/3 rounded-full border-solid border-4"src={characterData.image} alt={characterData.name} />
       <h1>Name : {characterData.name}</h1>
       <h2>Species : {characterData.species}</h2>
       <h2>Gender : {characterData.gender}</h2>
@@ -51,7 +52,8 @@ const Detail = () => {
         Current Location : {characterData.location.name} -{" "}
         {characterData.location.type}
       </h2>
-      <h2>Status(spoiler alert!) : {characterData.status}</h2>
+      <h2>Status : {characterData.status}</h2>
+</main>
     </div>
   );
 };
