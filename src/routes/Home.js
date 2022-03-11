@@ -59,7 +59,7 @@ const Home = () => {
   };
 
   return (
-    <main className="font-sans no-underline">
+    <main className="font-sans no-underline bg-black">
       <Navbar/>
       <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
       <div className="grid grid-cols-4 ">

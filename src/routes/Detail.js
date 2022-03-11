@@ -38,10 +38,11 @@ const Detail = () => {
   if (loading) return <p>Loading...</p>;
   const characterData = data.character;
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Navbar/>
-      <main className="flex flex-col justify-center text-center items-center">
+      <main className="flex justify-center m-auto">
       <img className="w-1/3 rounded-full border-solid border-4"src={characterData.image} alt={characterData.name} />
+      <div>
       <h1>Name : {characterData.name}</h1>
       <h2>Species : {characterData.species}</h2>
       <h2>Gender : {characterData.gender}</h2>
@@ -53,6 +54,7 @@ const Detail = () => {
         {characterData.location.type}
       </h2>
       <h2>Status : {characterData.status}</h2>
+</div>
 </main>
     </div>
   );
