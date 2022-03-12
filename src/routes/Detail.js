@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { gql, useQuery } from "@apollo/client";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 const GET_CHARACTER = gql`
   query GetCharacter($id: ID!) {
     character(id: $id) {
@@ -38,24 +38,28 @@ const Detail = () => {
   if (loading) return <p>Loading...</p>;
   const characterData = data.character;
   return (
-    <div className="flex flex-col h-screen">
-      <Navbar/>
-      <main className="flex justify-center m-auto">
-      <img className="w-1/3 rounded-full border-solid border-4"src={characterData.image} alt={characterData.name} />
-      <div>
-      <h1>Name : {characterData.name}</h1>
-      <h2>Species : {characterData.species}</h2>
-      <h2>Gender : {characterData.gender}</h2>
-      <h2>
-        Origin : {characterData.origin.name} - {characterData.origin.type}
-      </h2>
-      <h2>
-        Current Location : {characterData.location.name} -{" "}
-        {characterData.location.type}
-      </h2>
-      <h2>Status : {characterData.status}</h2>
-</div>
-</main>
+    <div className="flex flex-col h-screen font-sans bg-[#282a36]">
+      <Navbar />
+      <main className="flex justify-center m-auto py-5 px-9 border-solid border-2 rounded-xl">
+        <img
+          className="w-1/3 mr-3 rounded-full border-solid border-4"
+          src={characterData.image}
+          alt={characterData.name}
+        />
+        <div className="ml-3">
+          <h1>Name : {characterData.name}</h1>
+          <h2>Species : {characterData.species}</h2>
+          <h2>Gender : {characterData.gender}</h2>
+          <h2>
+            Origin : {characterData.origin.name} - {characterData.origin.type}
+          </h2>
+          <h2>
+            Current Location : {characterData.location.name} -{" "}
+            {characterData.location.type}
+          </h2>
+          <h2>Status : {characterData.status}</h2>
+        </div>
+      </main>
     </div>
   );
 };

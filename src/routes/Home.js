@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Characters from "../components/Characters";
 import SearchByInput from "../components/SearchByInput";
 import Pagination from "../components/Pagination";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import ErrorPage from "../components/404";
 import { useQuery, gql } from "@apollo/client";
 //Grapql query
@@ -38,7 +38,7 @@ const Home = () => {
   });
   //When loading, error
   if (loading) return <p>Loading...</p>;
-  if (error) return <ErrorPage/>;
+  if (error) return <ErrorPage />;
   //Variables for components
   const totalItems = data.characters.info.count;
   const charactersData = data.characters.results;
@@ -59,19 +59,19 @@ const Home = () => {
   };
 
   return (
-    <main className="font-sans no-underline bg-black">
-      <Navbar/>
+    <main className="font-sans no-underline bg-[#282a36]">
+      <Navbar />
       <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
       <div className="grid grid-cols-4 ">
-      {charactersData.map((character) => (
-        <Characters
-          key={character.id}
-          id={character.id}
-          name={character.name}
-          image={character.image}
-          species={character.species}
-        />
-      ))}
+        {charactersData.map((character) => (
+          <Characters
+            key={character.id}
+            id={character.id}
+            name={character.name}
+            image={character.image}
+            species={character.species}
+          />
+        ))}
       </div>
       <Pagination
         page={page}

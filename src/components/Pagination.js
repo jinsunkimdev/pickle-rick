@@ -1,6 +1,6 @@
 import Pagination from "react-js-pagination";
-import 'bootstrap/dist/css/bootstrap.css';
-import PageDiv from 'react-bootstrap/Pagination';
+import "bootstrap/dist/css/bootstrap.css";
+import PageDiv from "react-bootstrap/Pagination";
 const PaginationComp = ({ page, totalItems, handlePageChange }) => {
   return (
     <PageDiv className="flex justify-center">
