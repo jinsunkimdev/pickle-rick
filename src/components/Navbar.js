@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="flex relative bg-gradient-to-r shadow-xl mb-3 duration-200 from-[#50fa7b] via-[#B8AEF7] to-[#f3bf99] animate-gradient-x">
+    <nav className="flex relative bg-gradient-to-r mb-3 duration-200 from-[#50fa7b] via-[#B8AEF7] to-[#f3bf99] animate-gradient-x">
       <Link
         to={`/`}
         className="flex w-1/3 justify-center my-0 mx-auto items-center no-underline align-center relative"

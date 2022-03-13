@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 const Characters = ({ id, name, image, species }) => {
   return (
-    <div className=" group text-center hover:scale-110 ease-in duration-200 mx-5 my-5 ">
+    <div className=" group text-center hover:scale-110 ease-in duration-200 mx-5 my-5">
       <Link
         className="no-underline"
         to={`/${id}`}
         id={id}
       >
         <div className="relative ">
-          <div className="absolute inset-0 bg-[#bd93f9] rounded-full blur-lg"></div>
+          <div className="absolute inset-0 bg-[#bd93f9] rounded-full blur-sm group-hover:blur-lg"></div>
           <img
-            className="w-full relative rounded-full mx-auto my-0 shadow-lg "
+            className="w-full relative rounded-full mx-auto my-0 "
             src={image}
             alt={name}
           />
