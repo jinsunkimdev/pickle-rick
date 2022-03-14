@@ -12,10 +12,10 @@ const SearchByInput = ({ handleChange, handleSubmit }) => {
         onChange={handleChange}
         autoComplete="off"
       />
-      <div className="relative">
-        <div className="absolute py-4 px-4 inset-0 bg-[#50fa7b] blur-md"></div>
+      <div className="relative group">
+        <div className="absolute py-4 px-4 inset-0 bg-[#50fa7b] blur-sm group-hover:blur-lg"></div>
         <button
-          className="relative py-3 px-4 ml-2 rounded-md bg-[#282a36]  hover:scale-110 ease-in duration-100"
+          className="relative py-3 px-3 ml-1 rounded-md bg-[#282a36]  hover:scale-110 ease-in duration-100"
           type="submit"
         >
           <svg

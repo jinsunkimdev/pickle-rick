@@ -8,9 +8,9 @@ const Characters = ({ id, name, image, species }) => {
         id={id}
       >
         <div className="relative ">
-          <div className="absolute inset-0 bg-[#bd93f9] rounded-full blur-sm group-hover:blur-lg"></div>
+          <div className="absolute inset-0 bg-green-400 rounded-full blur-sm group-hover:blur-lg"></div>
           <img
-            className="w-full relative rounded-full mx-auto my-0 "
+            className="w-full relative rounded-full mx-auto my-0 drop-shadow-2xl"
             src={image}
             alt={name}
           />

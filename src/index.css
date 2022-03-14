@@ -5,3 +5,7 @@
 * {
 	@apply text-white
   }
+  h1{
+  @apply text-white } 
+  h2, h3, h4{
+  @apply text-black}

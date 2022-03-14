@@ -40,7 +40,7 @@ const Detail = () => {
   return (
     <div className="flex flex-col h-screen font-sans bg-[#282a36]">
       <Navbar />
-      <main className="flex justify-center bg-gradient-to-r duration-200 from-[#7493E9] to-[#ffb86c]  m-auto py-5 px-9 border-solid border-[#bd93f9] border-2 rounded-xl">
+      <main className="flex justify-center bg-gray-400 m-auto py-5 px-9 border-solid border-[#bd93f9] border-2 rounded-xl">
         <img
           className="w-1/3 mr-3 rounded-full border-solid border-[#bd93f9] border-4"
           src={characterData.image}
