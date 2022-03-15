@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['"Patrick Hand SC"', "cursive"],
+        fredoka: ["'Fredoka', sans-serif"]
       },
       variants: {
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
