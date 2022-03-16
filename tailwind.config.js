@@ -5,13 +5,13 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['"Patrick Hand SC"', "cursive"],
-        fredoka: ["'Fredoka', sans-serif"]
+        fredoka: ["'Fredoka', sans-serif"],
       },
       variants: {
         textColor: ['responsive', 'hover', 'focus', 'group-hover'],
          },
       animation: {
-        "gradient-x": "gradient-x 15s ease infinite",
+        "gradient-x": "gradient-x 6s ease infinite",
       },
       keyframes: {
         "gradient-x": {

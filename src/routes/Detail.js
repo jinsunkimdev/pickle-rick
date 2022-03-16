@@ -38,7 +38,7 @@ const Detail = () => {
   if (loading) return <p>Loading...</p>;
   const characterData = data.character;
   return (
-    <div className="flex flex-col h-screen font-sans bg-[#282a36]">
+    <div className="flex flex-col h-screen font-sans bg-[#fff]">
       <Navbar />
       <main className="flex justify-center bg-gray-400 m-auto py-5 px-9 border-solid border-[#bd93f9] border-2 rounded-xl">
         <img

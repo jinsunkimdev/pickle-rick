@@ -59,7 +59,7 @@ const SearchCharacters = () => {
   };
 
   return (
-    <main className="font-sans no-underline bg-[#121212]">
+    <main className="font-sans bg-[#fff]">
       <Navbar />
       <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
       <div className="grid grid-cols-4 ">

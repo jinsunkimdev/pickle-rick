@@ -1,9 +1,8 @@
 import Pagination from "react-js-pagination";
-import "bootstrap/dist/css/bootstrap.css";
 import PageDiv from "react-bootstrap/Pagination";
 const PaginationComp = ({ page, totalItems, handlePageChange }) => {
   return (
-    <PageDiv className="flex justify-center">
+    <PageDiv className="flex justify-center text-lime-500 text-2xl">
       <Pagination
         activePage={page}
         itemsCountPerPage={20}
@@ -14,7 +13,7 @@ const PaginationComp = ({ page, totalItems, handlePageChange }) => {
         onChange={handlePageChange}
         itemClass="page-item"
         linkClass="page-link"
-        innerClass="pagination flex"
+        innerClass="flex"
       />
     </PageDiv>
   );
