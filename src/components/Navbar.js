@@ -24,12 +24,6 @@ const Navbar = () => {
       >
         <h2 className="text-xl">Characters</h2>
       </Link>
-      <Link
-        to={"/episodes"}
-        className="flex text-sm mx-[1em] justify-center items-center"
-      >
-        <h2 className="text-xl">Episodes</h2>
-      </Link>
       <a
         href="https://github.com/jinsunkimdev"
         className="absolute right-6 bottom-2 text-black"
