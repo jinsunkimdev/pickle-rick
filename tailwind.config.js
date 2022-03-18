@@ -12,6 +12,7 @@ module.exports = {
          },
       animation: {
         "gradient-x": "gradient-x 6s ease infinite",
+        "spin-slow": "spin 5s linear infinite"
       },
       keyframes: {
         "gradient-x": {
@@ -23,6 +24,11 @@ module.exports = {
             "background-size": "200% 200%",
             "background-position": "right center",
           },
+        },
+        spin:{
+         to:{
+           transfrom: 'rotate(360deg)'
+         }, 
         },
       },
     },

@@ -2,11 +2,10 @@ import Navbar from "../components/Navbar";
 //Home page
 const Home = () => {
   return (
-    <main className="font-sans h-screen no-underline bg-[#4B7737] bg-[url('/public/img/rickandmorty-wallpaper.jpg')] bg-contain bg-center bg-no-repeat">
-
+    <main className="font-sans h-screen no-underline">
       <Navbar />
-      <div className="h-1/4 text-center "></div>
-      <div className="flex justify-around px-[15em] z-20">
+      <div className="h-[15%] text-center "></div>
+      <div className="flex relative items-center justify-around px-[15em] z-20">
           <div className="h-[13em] w-[13em] relative skew-y-12 shadow-lg ">
             <img
               src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
@@ -30,12 +29,14 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <p className="flex items-center text-[13em] z-0 bg-gradient-to-r text-transparent bg-clip-text duration-100 from-[#FDEEBF] via-[#00B1D4] to-[#72A85E] animate-gradient-x transition">AND</p>
+          <img className="flex justify-center items-center w-1/3 animate-spin-slow" src="/img/portal-file.png" alt="green portal"/>
+          <p className="flex absolute items-center text-[13em] z-0 bg-gradient-to-r text-transparent bg-clip-text duration-100 from-[#FDEEBF] via-[#00B1D4] to-[#72A85E] animate-gradient-x transition">AND
+          </p>
           <div className="h-[12em] w-[12em] relative -skew-y-12 shadow-lg z-20">
             <img
               src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
               alt="Rick"
-              className="absolute inset-0  rounded-lg shadow-2xl"
+              className="absolute inset-0 rounded-lg shadow-2xl"
             ></img>
             <div className="transform hover:-rotate-90 hover:translate-x-full hover:scale-125 transition duration-300">
               <div className="h-[12em] w-[12em] text-white rounded-lg shadow-2xl">
