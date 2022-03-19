@@ -4,6 +4,8 @@ import SearchByInput from "../components/SearchByInput";
 import Pagination from "../components/Pagination";
 import Navbar from "../components/Navbar";
 import ErrorPage from "../components/404";
+import { RevolvingDot } from "react-loader-spinner";
+
 import { useQuery, gql } from "@apollo/client";
 //Grapql query
 const GET_CHARACTERS = gql`
@@ -37,7 +39,19 @@ const SearchCharacters = () => {
     variables: { pageNum: page, characterName: characterName.name },
   });
   //When loading, error
-  if (loading) return <p>Loading...</p>;
+  if (loading)
+    return (
+      <section className="relative min-w-screen min-h-screen bg-[url('/public/img/stars.jpeg')]">
+        <div className="absolute top-1/2 left-1/2">
+          <RevolvingDot
+            height="200"
+            width="200"
+            color="yellow"
+            ariaLabel="loading"
+          />
+        </div>
+      </section>
+    );
   if (error) return <ErrorPage />;
   //Variables for components
   const totalItems = data.characters.info.count;
@@ -59,10 +73,10 @@ const SearchCharacters = () => {
   };
 
   return (
-    <main className="font-sans bg-[#fff]">
+    <main className="font-sans bg-gray-800 min-h-full">
       <Navbar />
       <SearchByInput handleChange={handleChange} handleSubmit={handleSubmit} />
-      <div className="grid grid-cols-4 ">
+      <div className="grid grid-cols-5 text-white">
         {charactersData.map((character) => (
           <Characters
             key={character.id}

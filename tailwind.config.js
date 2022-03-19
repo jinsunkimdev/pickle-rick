@@ -8,11 +8,11 @@ module.exports = {
         fredoka: ["'Fredoka', sans-serif"],
       },
       variants: {
-        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
-         },
+        textColor: ["responsive", "hover", "focus", "group-hover"],
+      },
       animation: {
         "gradient-x": "gradient-x 6s ease infinite",
-        "spin-slow": "spin 5s linear infinite"
+        "spin-slow": "spin 5s linear infinite",
       },
       keyframes: {
         "gradient-x": {
@@ -25,10 +25,10 @@ module.exports = {
             "background-position": "right center",
           },
         },
-        spin:{
-         to:{
-           transfrom: 'rotate(360deg)'
-         }, 
+        spin: {
+          to: {
+            transfrom: "rotate(360deg)",
+          },
         },
       },
     },

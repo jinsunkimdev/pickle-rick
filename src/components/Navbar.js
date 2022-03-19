@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="flex sticky top-0 w-full z-10 mb-3 py-2 font-fredoka shadow-md bg-opacity-25">
+    <nav className="flex sticky top-0 w-full z-10 mb-3 py-2 font-fredoka shadow-md bg-[#fff] bg-opacity-25 text-white">
       <Link
         to={`/`}
         className="flex w-[18%] items-center align-center relative"
@@ -26,7 +26,7 @@ const Navbar = () => {
       </Link>
       <a
         href="https://github.com/jinsunkimdev"
-        className="absolute right-6 bottom-2 text-black"
+        className="absolute right-6 bottom-2 text-white"
       >
         <FontAwesomeIcon icon={faGithub} className="fa-xl hover:scale-110" />
       </a>
