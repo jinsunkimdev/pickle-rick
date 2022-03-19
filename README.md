@@ -10,3 +10,7 @@
 ![tailwindcss](https://img.shields.io/badge/TailwindCSS-06B6D4?style=plastic&logo=tailwindcss&logoColor=white) 
 
 ![rickandmortyapi](https://img.shields.io/badge/API-rickandmorty-1abc9c.svg)
+# LIVE DEMO
+==> https://pickle-rick-jinsunkimdev.netlify.app/
+# FEATURES
+<img width="800" alt="pickle-rick screenshot" src="https://user-images.githubusercontent.com/69026725/159114326-40f57196-f9a2-4f0a-8c06-ed18468d8b68.png">
